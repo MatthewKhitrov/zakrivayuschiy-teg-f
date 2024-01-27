@@ -28,7 +28,7 @@
 /* ----------НАЧАЛО_HEADER-----------------------------------*/
 
 .header {
-  font-family: var(--font-additional), sans-serif;
+  font-family: var(--font-additional), fantasy;
   background-color: var(--Themes-background-color);
   border: 2px solid var(--color-text);
   max-width: 700px;
@@ -81,6 +81,7 @@
   cursor: pointer;
   border: none;
   margin-inline-start: -6px;
+  transition: opacity .3s ease;
 }
 
 .theme-menu__button:hover {
@@ -119,6 +120,8 @@
   font-weight: var(--font-weight-title);
   font-size: 18px;
   padding: 5px 10px;
+  font-variation-settings: "wght" var(--font-weight-text),
+    "wght" var(--font-weight-title);
 }
 
 .card_image {
@@ -135,8 +138,8 @@
   filter: saturate(50%);
 }
 
-.card_image_second_card{
-   filter: saturate(258%);
+.card_image_second_card {
+  filter: saturate(258%);
 }
 
 .card_image_third_card {
@@ -160,10 +163,8 @@
 }
 
 .card_image_eighth_card {
-  filter: drop-shadow(5px 15px 3px rgba(0, 0, 0, 0.8)) invert(0.7);
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8)) invert(0.1);
 }
-
-
 
 /* лейбл */
 
@@ -173,31 +174,34 @@
   margin-inline-end: 25px;
   margin-block-start: 25px;
   color: inherit;
-  font-family: var(--font-additional), sans-serif;
+  font-family: var(--font-additional), fantasy;
   font-size: 14px;
   font-weight: inherit;
   line-height: inherit;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   z-index: 1;
+  text-shadow: 1px 1px #d3deed;
+  -webkit-text-stroke: 1px var(--label-text-color);
 }
 
-@supports (-webkit-text-stroke: 0.5px var(--lable-color)) {
-  .image_lable {
-    -webkit-text-stroke: 0.5px var(--lable-color);
+@supports (-webkit-text-stroke: 1px var(--label-text-color)) {
+  .picture_label {
+    text-shadow: none;
   }
 }
-
 
 .card_text {
   box-sizing: border-box;
   font-weight: var(--font-weight-text);
   margin: 21px auto 0 auto;
   width: calc(100% - 50px);
+  line-height: 21px;
 }
 
 .card_text_author {
   margin: 27px auto 0 auto;
+  line-height: 21px;
 }
 
 .box_button {
@@ -225,7 +229,7 @@
   position: relative;
   z-index: 1;
   margin: auto;
-  font-family: var(--font-additional), sans-serif;
+  font-family: var(--font-additional), fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -287,6 +291,21 @@
   overflow: hidden;
 }
 
+.floopy_icon {
+  color: var(--color-text-button);
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 2;
+}
+
+.footer__button:focus {
+  outline: none;
+}
+.footer__button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--color-text);
+  transition: box-shadow 0.5s;
+}
+
 .floppy {
   mix-blend-mode: difference;
   position: relative;
@@ -298,7 +317,7 @@
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.dialog {
+.dialog[open] {
   background-color: var(--Themes-background-color);
   border: 2px solid var(--color-text);
   color: var(--color-text-button);
@@ -316,10 +335,11 @@
   row-gap: 30px;
 }
 
+
 .dialog_text {
   grid-column-start: 2;
   grid-column-end: 2;
-  font-family: var(--font-additional), sans-serif;
+  font-family: var(--font-additional), fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--font-weight-text);
@@ -338,12 +358,20 @@
   background-color: var(--Themes-background-color);
   border: 2px solid var(--color-text);
   color: var(--color-text);
-  font-family: var(--font-additional), sans-serif;
+  font-family: var(--font-additional), fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--font-weight-text);
   position: relative;
   overflow: hidden;
+}
+
+.dialog_button:focus {
+  outline: none;
+}
+.dialog_button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--color-text);
+  transition: box-shadow 0.5s;
 }
 
 /* ----------КОНЕЦ_fotter-----------------------------------*/
@@ -356,7 +384,7 @@
   .footer__button {
     width: 310px;
     display: flex;
-    gap:15px;
+    gap: 15px;
     flex-direction: column;
     min-height: 85px;
   }

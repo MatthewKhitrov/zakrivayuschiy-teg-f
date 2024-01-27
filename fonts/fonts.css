@@ -11,7 +11,8 @@
 
   @font-face {
     font-family: 'Inter-Variable';
-    font-variation-settings: 'wght' 400, 'wght' 700, 'wght' 465, 'wght' 785;
+    font-weight: var(--font-weight-text) var(--font-weight-title);
+   /*  font-variation-settings: 'wght' 400, 'wght' 700, 'wght' 465, 'wght' 785; */
     font-display: swap;
     src:
     local("Inter-Variable"),
