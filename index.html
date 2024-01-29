@@ -567,14 +567,15 @@
 
         <p class="card_text">
           Во время учёбы часто возникает чувство, когда не знаешь, за что
-          хвататься. Вроде и проектную пора&nbsp;сдавать, и задачи хочется порешать,
-          и в теории получше разобраться, и жизнь не забыть пожить. В такие
-          моменты очень нужна концентрация. Вспомните, откуда вы её черпали.
+          хвататься. Вроде и проектную пора&nbsp;сдавать, и задачи хочется
+          порешать, и в теории получше разобраться, и жизнь не забыть пожить. В
+          такие моменты очень нужна концентрация. Вспомните, откуда вы её
+          черпали.
         </p>
 
         <p class="card_text card_text_author">
           Место для ваших воспоминаний о начале обучения.
-            </p>
+        </p>
         <div class="box_button">
           <button class="card__icon-button">
             <svg
@@ -657,7 +658,7 @@
         <p class="card_text card_text_author">
           Место, чтобы остановиться, подумать и написать, что вы чувствуете в
           этой точке пути.
-            </p>
+        </p>
         <div class="box_button">
           <button class="card__icon-button">
             <svg
@@ -719,38 +720,39 @@
       </article>
     </main>
     <script src="./scripts/like.js"></script>
-  </body>
 
-  <footer class="footer">
-    <button
-      class="footer__button"
-      type="button"
-      onclick="window['dialog-id'].showModal();"
-      aria-controls="dialog-id"
-    >
-
-    
-    <svg class="floopy_icon" viewBox="0 0 29 28" width="21" height="21">
-      <use href="../svg/floppy_OMG.svg#floppy-1">
-    </svg> 
-
-      <span class="footer_text button__text">Сохранить на память</span>
-    </button>
-    <dialog class="dialog" id="dialog-id" >
-      <form class="dialog_form">
-        
-        <svg class="floopy_icon" viewBox="0 0 29 28" width="40" height="40">
-          <use href="../svg/floppy_OMG.svg#floppy-1">
-        </svg> 
-
-        <span class="dialog_text footer_text button__text"
-          >вставьте дискету, чтобы продолжить</span
+    <footer class="footer">
+      <button
+        class="footer__button"
+        type="button"
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id"
+      >
+        <svg
+          class="floopy_icon floopy_icon_button"
+          viewBox="0 0 29 28"
+          width="21"
+          height="21"
         >
-        <button class="dialog_button" type="submit"  method="dialog" >
-          <span class="footer_text button__text">ОК</span>
-        </button>
-      </form>
-    </dialog>
-  </footer>
-</html>
+          <use href="./svg/floppy_OMG.svg#floppy-1" />
+        </svg>
 
+        <span class="footer_text button__text">Сохранить на память</span>
+      </button>
+      <dialog class="dialog" id="dialog-id">
+        <form class="dialog_form" method="dialog">
+          <svg class="floopy_icon" viewBox="0 0 29 28" width="40" height="40">
+            <use href="./svg/floppy_OMG.svg#floppy-1" />
+          </svg>
+
+          <span class="dialog_text footer_text button__text"
+            >вставьте дискету, чтобы продолжить</span
+          >
+          <button class="dialog_button" type="submit">
+            <span class="footer_text button__text">ОК</span>
+          </button>
+        </form>
+      </dialog>
+    </footer>
+  </body>
+</html>
